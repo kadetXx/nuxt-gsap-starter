@@ -1,4 +1,9 @@
-# Nuxt + Gsap Starter Boilerplate
+# Nuxt - Gsap Starter Template
+
+- NUXT Version 3 💚
+- GSAP Classes Setup 🧩
+- LENIS native smooth scroll 🏄
+- SASS 7-1 Architecture 🛠️
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
