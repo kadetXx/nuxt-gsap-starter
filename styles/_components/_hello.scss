@@ -1,0 +1,20 @@
+.hello {
+  height: 100vh;
+  @include flex(center, center, 1rem);
+}
+
+.hello__text {
+  font-size: 6rem;
+  font-weight: 900;
+  -webkit-text-stroke-width: 6px;
+  -webkit-text-stroke-color: $col-grey;
+  font-family: $font-mori;
+  color: $col-grey;
+}
+
+.hello__dash {
+  height: 1.4rem;
+  width: 4rem;
+  margin-top: 1rem;
+  background-color: $col-grey;
+}
