@@ -12,7 +12,7 @@ interface ScrollAnimationSettings {
 
 interface ScrollAnimationProps {
   element: string | HTMLElement;
-  parallax: ScrollTrigger.Vars & ScrollAnimationSettings;
+  animationProps: ScrollTrigger.Vars & ScrollAnimationSettings;
 }
 
 type SecondaryElements = {

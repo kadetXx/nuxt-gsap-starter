@@ -4,12 +4,12 @@ import { Dom } from "./dom";
 export class ScrollAnimation extends Dom {
   timeline: GSAPTimeline;
 
-  constructor({ element, parallax }: ScrollAnimationProps) {
+  constructor({ element, animationProps }: ScrollAnimationProps) {
     super({ selector: element, secondarySelectors: {} });
-    this.animate(parallax);
+    this.animate(animationProps);
   }
 
-  animate(props: ScrollAnimationProps["parallax"]) {
+  animate(props: ScrollAnimationProps["animationProps"]) {
     const { scrub, trigger, start, ...rest } = props;
 
     gsap.set(this.element, {
