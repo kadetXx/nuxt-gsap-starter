@@ -1,11 +1,12 @@
 import gsap from "gsap";
 import Lenis from "@studio-freight/lenis";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { Dom } from "./classes/dom";
 import { Hello } from "./components/hello";
 
 export class Interactions {
   ismobile: boolean;
-  components: ObjectStringMap = {};
+  components: { [x: string]: Dom };
 
   constructor() {
     gsap.registerPlugin(ScrollTrigger);

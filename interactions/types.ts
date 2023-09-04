@@ -18,5 +18,3 @@ interface ScrollAnimationProps {
 type ChildElements = {
   [x: string]: HTMLElement[];
 };
-
-type ObjectStringMap = { [x: string]: Object };
