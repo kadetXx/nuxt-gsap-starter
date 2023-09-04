@@ -10,7 +10,7 @@ export class ScrollAnimation extends Dom {
   }
 
   animate(props: ScrollAnimationProps["parallax"]) {
-    const { scrub, trigger, ...rest } = props;
+    const { scrub, trigger, start, ...rest } = props;
 
     gsap.set(this.element, {
       ...props.initialState,
@@ -19,7 +19,8 @@ export class ScrollAnimation extends Dom {
     this.timeline = gsap.timeline({
       scrollTrigger: {
         ...rest,
-        scrub: scrub || 0.7,
+        start: start ?? "top bottom",
+        scrub: scrub ?? 0.7,
         trigger: trigger ?? this.element,
       },
     });
