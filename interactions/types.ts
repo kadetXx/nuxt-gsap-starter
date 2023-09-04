@@ -1,6 +1,6 @@
 interface SelectorProps {
   selector: string | HTMLElement;
-  childSelectors: {
+  secondarySelectors: {
     [x: string]: string | HTMLElement;
   };
 }
@@ -15,6 +15,6 @@ interface ScrollAnimationProps {
   parallax: ScrollTrigger.Vars & ScrollAnimationSettings;
 }
 
-type ChildElements = {
+type SecondaryElements = {
   [x: string]: HTMLElement[];
 };

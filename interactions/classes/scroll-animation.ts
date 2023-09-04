@@ -5,7 +5,7 @@ export class ScrollAnimation extends Dom {
   timeline: GSAPTimeline;
 
   constructor({ element, parallax }: ScrollAnimationProps) {
-    super({ selector: element, childSelectors: {} });
+    super({ selector: element, secondarySelectors: {} });
     this.animate(parallax);
   }
 

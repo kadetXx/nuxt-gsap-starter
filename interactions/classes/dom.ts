@@ -3,13 +3,17 @@ import { getElements } from "../utils";
 
 export class Dom extends EventEmitter {
   element: HTMLElement;
-  children: ChildElements;
+  secondaryElements: SecondaryElements;
 
-  constructor({ selector, childSelectors }: SelectorProps) {
+  constructor({ selector, secondarySelectors }: SelectorProps) {
     super();
-    const { element, children } = getElements({ selector, childSelectors });
+
+    const { element, secondaryElements } = getElements({
+      selector,
+      secondarySelectors,
+    });
 
     this.element = element;
-    this.children = children;
+    this.secondaryElements = secondaryElements;
   }
 }

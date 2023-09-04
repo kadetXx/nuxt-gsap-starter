@@ -9,7 +9,7 @@ export class Hello extends Dom {
   constructor() {
     super({
       selector: ".hello",
-      childSelectors: {
+      secondarySelectors: {
         dash: ".hello__dash",
       },
     });
@@ -21,14 +21,14 @@ export class Hello extends Dom {
   init() {
     this.animations.push(
       new ScrollAnimation({
-        element: this.children.dash[0],
+        element: this.secondaryElements.dash[0],
         parallax: {
           pin: true,
           trigger: this.element,
           start: "top top",
 
           function: tl => {
-            tl.to(this.children.dash[0], {
+            tl.to(this.secondaryElements.dash[0], {
               width: "40vw",
             });
           },

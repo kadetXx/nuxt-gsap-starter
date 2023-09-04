@@ -1,4 +1,4 @@
-export const getElements = ({ selector, childSelectors }: SelectorProps) => {
+export const getElements = ({ selector, secondarySelectors }: SelectorProps) => {
   const isEl = selector instanceof window.HTMLElement;
   const dummyDiv = document.createElement("div");
 
@@ -6,14 +6,16 @@ export const getElements = ({ selector, childSelectors }: SelectorProps) => {
     ? selector
     : document.querySelector(selector) ?? dummyDiv;
 
-  const children: ChildElements = {};
+  const secondaryElements: SecondaryElements = {};
 
-  Object.entries(childSelectors).forEach(([key, item]) => {
+  Object.entries(secondarySelectors).forEach(([key, item]) => {
     const isEl = item instanceof window.HTMLElement;
-    children[key] = isEl ? [item] : Array.from(document.querySelectorAll(item));
+    secondaryElements[key] = isEl
+      ? [item]
+      : Array.from(document.querySelectorAll(item));
   });
 
-  return { element, children };
+  return { element, secondaryElements };
 };
 
 export const getDistanceFromMidViewport = (element: HTMLElement) => {
