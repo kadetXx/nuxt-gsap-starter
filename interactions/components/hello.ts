@@ -22,7 +22,7 @@ export class Hello extends Dom {
     this.animations.push(
       new ScrollAnimation({
         element: this.secondaryElements.dash[0],
-        parallax: {
+        animationProps: {
           pin: true,
           trigger: this.element,
           start: "top top",
