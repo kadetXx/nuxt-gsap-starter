@@ -5,7 +5,6 @@ import { Dom } from "./classes/dom";
 import { Hello } from "./components/hello";
 
 export class Interactions {
-  ismobile: boolean;
   components: { [x: string]: Dom };
 
   constructor() {
@@ -45,7 +44,11 @@ export class Interactions {
   }
 
   onResize() {
-    this.ismobile = window.innerWidth <= 700;
+    /**
+     * - recalculate
+     * - reinitialise
+     * - reset, etc.
+     * */
   }
 
   addEventListeners() {
