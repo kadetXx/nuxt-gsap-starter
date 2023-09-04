@@ -18,3 +18,13 @@ interface ScrollAnimationProps {
 type SecondaryElements = {
   [x: string]: HTMLElement[];
 };
+
+interface ObserverAnimationProps
+  extends Omit<SelectorProps, "secondarySelectors"> {
+  initialState?: gsap.TweenVars;
+  target?: HTMLElement | null;
+  animation?: IntersectionObserverInit & {
+    tween?: gsap.TweenVars;
+    resetOnExit?: boolean;
+  };
+}
