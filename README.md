@@ -66,3 +66,9 @@ yarn preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Deploy On Brimble
+
+<a href="https://nuxt-gsap-starter.brimble.app">
+<img src="https://res.cloudinary.com/dgqfojhx4/image/upload/v1692011166/brimble-assets/badge_fuuq5i.png" alt="Brimble badge"/>
+</a>
