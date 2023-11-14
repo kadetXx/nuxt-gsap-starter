@@ -5,7 +5,7 @@ import { Dom } from "./classes/dom";
 import { Hello } from "./components/hello";
 
 export class Interactions {
-  components: { [x: string]: Dom };
+  components: { [x: string]: Dom } = {};
 
   constructor() {
     gsap.registerPlugin(ScrollTrigger);
